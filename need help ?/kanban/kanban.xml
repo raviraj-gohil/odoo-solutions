@@ -1,0 +1,35 @@
+<record id="estate_kanban" model="ir.ui.view">
+    <field name="name">estate.kanban</field>
+    <field name="model">estate.property</field>
+    <field name="arch" type="xml">
+        <kanban default_group_by="property_type_id">
+            <field name="status"/>
+                <templates>
+                    <t t-name="kanban-box">
+                      <div>  
+                        <div class="oe_kanban_global_click">
+                            <strong><field name="name"/></strong>
+                        </div>
+
+                        <div>
+                            Expected Price: <field name="expected_price"/>
+                        </div>
+
+                        <div t-if="record.status.raw_value == 'receive'">
+                            Best Price: <field name="best_price"/>
+                        </div>
+
+                        <div t-if="record.status.raw_value == 'accepted'">
+                            Seling Price: <field name="selling_price"/>
+                        </div>
+
+
+                        <div>
+                            <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
+                        </div>
+                      </div>
+                    </t> 
+                </templates>
+        </kanban>
+    </field>
+</record>

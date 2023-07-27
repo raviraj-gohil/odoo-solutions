@@ -1,0 +1,11 @@
+<record id="estate_form" model="ir.ui.view">
+        <field name="name">estate.form</field>
+        <field name="model">estate.property</field>
+        <field name="arch" type="xml">
+            <form string="Estate">
+                <header>
+                    <button name="sold_property" type="object" string="SOLD" states="new,accepted,rejected" attrs="{'invisible': [('status', 'in', ['sold', 'cancel'])]}"/>
+                </header>
+            </form>
+        </field>
+</record>

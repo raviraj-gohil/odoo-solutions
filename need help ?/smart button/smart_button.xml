@@ -1,0 +1,15 @@
+<record id="estate_type_form" model="ir.ui.view">
+    <field name="name">estate.type.form</field>
+    <field name="model">estate.property.type</field>
+    <field name="arch" type="xml">
+        <form string="Property Type">
+            <sheet>
+                <div name="button_box" position="inside">
+                    <button class="oe_stat_button" type="object" name="find_offer" icon="fa-money">
+                        <field name='offer_count' string="offers" widget='statinfo'/>
+                    </button>
+                </div>
+            </sheet>
+        </form>
+    </field>
+</record>

@@ -1,0 +1,38 @@
+1] -->  Model - res.partner
+		customer field required
+			if company then website field required
+			if individual then phone and email fields required
+
+
+2] -->	Model - res.partner
+		move/replace tag_id field
+
+
+3] -->	Model - sale.order
+		In quotation
+			add email autometic in customer field
+
+
+4] -->	Model - sale.order
+		In quotation
+			if type company then fiscal position field required
+
+
+5] -->	Model - sale.order
+		if product type service then sub total of all service product
+
+
+6] -->	Model - account.move
+		In invoice
+			set default filter My Invoices
+
+
+7] -->	Model - res.partner
+		In contact
+			set smart button of buyer
+			count number of buyers
+			butten invisible if not any buyer
+
+
+8] -->	Model - crm.lead
+		add snooze button on tree view
